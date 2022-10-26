@@ -1,0 +1,28 @@
+.first{
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+    z-index: 5;
+    position: absolute;
+}
+.second{
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    z-index: 1;
+}
+.third{
+    width: 200px;
+    height: 150px;
+    background-color: yellow;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+
