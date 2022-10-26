@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.outerDiv{
+    height: 100vh;
+    background-color: antiquewhite;
+}
+.innerDiv{
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

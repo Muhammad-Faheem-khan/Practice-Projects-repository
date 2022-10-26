@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    border-top: 10px solid black;
+    font-family: Georgia;
+    color: #444;
+    background-color: #f2f0ed;
+      
+}
+.container{
+   
+    width: 84%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-top: 50px ;
+}
+
+.linebreak{
+margin: 15px 0;
+}
+
+#info{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#intro h1{
+    font-weight: 500;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+#intro h3{
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+#pdf{
+    background-color: gray;
+    
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.pdf-link{
+    text-decoration: none;
+    color: white;
+}
+#pdf:hover{
+    background-color: black;
+}
+.data{
+    width: 260px;
+}
+.mail{
+    color: darkred;
+}
+
+/* second section */
+/* Profile */
+.cv-aspects{
+    display: flex;
+    align-items:flex-start;
+    padding: 1rem 0;
+}
+.side-heading{
+    width: 20%;
+    font-size: 1.35rem;
+    font-weight: 500;
+    font-style: italic;
+    
+}
+.description{
+    width: 80%;
+    display: flex;
+}
+.description> p{
+    width: 75%;
+    font-size: 1.25rem;
+}
+
+/* skills */
+.skills{
+    width: 12rem;
+    margin-right: 5rem;
+    
+}
+.skill-heading{
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.skill-description{
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: rgb(70, 67, 67);
+}
+
+
+
+/* technical */
+.technical{
+    width: 80%
+}
+.tech-skill{
+    width: 17rem
+}
+
+.skill-linebreak{
+    margin: 5px 0;
+}
+.tech-skill-description{
+    display: flex;
+    
+}
+
+/* Experience */
+.experience{
+    width: 85%;
+}
+.company-name, .edu-heading{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.designation, .exp-date, .subjects{
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.exp-company{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.exp-description {
+    width: 95%;
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: rgb(70, 67, 67);
+    
+}
+.exp-linebreak{
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Education */
+
+.edu-linebreak{
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* footer */
+.footer{
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: rgb(70, 67, 67);
+}
