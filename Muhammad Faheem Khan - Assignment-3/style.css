@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Segoe UI", "Helvetica Neue";
+}
+/* Navbar Styling */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid whitesmoke;
+}
+#logo {
+  font-size: 30px;
+  margin-left: 9%;
+}
+.navigator {
+  padding-top: 8px;
+  margin-right: 10%;
+}
+.nav-list {
+  list-style-type: none;
+}
+.nav-list li {
+  display: inline-block;
+  margin-left: 25px;
+}
+.nav-link:hover {
+  color: black;
+}
+.nav-link {
+  text-decoration: none;
+  color: rgb(168, 160, 160);
+}
+
+.search-box {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+}
+.search {
+  border: 0;
+  padding: 5px;
+}
+.search:focus {
+  outline: none;
+}
+.search-button {
+  background-color: white;
+  border: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* page started from here */
+.container {
+  width: 82%;
+  margin: 0 auto;
+}
+.page-head {
+  margin: 2rem 0;
+}
+.page-heading {
+  font-size: 2.5rem;
+  font-family: "Righteous";
+  font-weight: 500;
+  padding-top: 2.5rem;
+}
+.page-description {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgb(105, 103, 103);
+}
+
+/* Card styling for reusability */
+.featured {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sub-heading {
+  font-size: 1.75rem;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+.card {
+  width: 49%;
+  height: auto;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.card-description {
+  padding: 1.5rem;
+  width: 65%;
+}
+.card-img {
+  width: 35%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px 0 0 4px;
+}
+.blogger-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+.card-heading {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: rgb(80, 78, 78);
+}
+.card-para {
+  font-size: 1rem;
+  color: rgb(164, 161, 161);
+  margin-bottom: 0.75rem;
+}
+.blog-info {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.data {
+  width: 60%;
+  margin-right: 3rem;
+}
+.blogger-name {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+.blog-date,
+footer p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgb(164, 161, 161);
+}
+.bookmark-icon {
+  font-size: 1.35rem;
+}
+.bookmark {
+  width: 1.35rem;
+  height: 1.35rem;
+  background-color: white;
+  border: 0;
+  padding-top: 1rem;
+}
+
+/* Story */
+
+.stories {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.story-card {
+  width: 32%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.story-card-img {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+.story-card-description {
+  width: 100%;
+}
+.data-story {
+  width: 100%;
+}
+
+.footer-section {
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+footer {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.author-name {
+  color: rgb(22, 104, 22);
+}
+
+@media screen and (max-width: 1000px) {
+  .story-card {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card,
+  .story-card {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+@media screen and (max-width: 610px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #logo,
+  .navigator {
+    margin: 0;
+  }
+  .page-heading {
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-heading {
+    padding-top: 10rem;
+    text-align: center;
+  }
+  .page-description {
+    text-align: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-img {
+    width: 100%;
+    height: 8rem;
+  }
+  .card-description {
+    width: 100%;
+  }
+}
