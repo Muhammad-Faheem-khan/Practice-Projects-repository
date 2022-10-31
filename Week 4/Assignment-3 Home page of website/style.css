@@ -14,26 +14,29 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  padding: 10px 0;
+  padding: 0.75rem 0.5rem 0 0;
   background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid whitesmoke;
 }
 #logo {
   font-size: 30px;
-  margin-left: 9%;
+  margin-left: 7%;
 }
 .navigator {
-  padding-top: 8px;
-  margin-right: 10%;
+  /* padding-top: 8px; */
+  margin-right: 7%;
 }
 .nav-list {
   list-style-type: none;
 }
 .nav-list li {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 1.5rem;
 }
 .nav-link:hover {
+  color: black;
+}
+.nav-link:visited {
   color: black;
 }
 .nav-link {
@@ -42,13 +45,13 @@ body {
 }
 
 .search-box {
-  border: 1px solid black;
-  border-radius: 20px;
-  padding: 5px;
+  border: 1px solid rgb(222, 220, 220);
+  border-radius: 1rem;
+  padding: 2px;
 }
 .search {
   border: 0;
-  padding: 5px;
+  margin: 2px;
 }
 .search:focus {
   outline: none;
@@ -56,13 +59,13 @@ body {
 .search-button {
   background-color: white;
   border: 0;
-  padding: 5px;
   cursor: pointer;
+  margin-right: 5px;
 }
 
 /* page started from here */
 .container {
-  width: 82%;
+  width: 86%;
   margin: 0 auto;
 }
 .page-head {
@@ -72,6 +75,7 @@ body {
   font-size: 2.5rem;
   font-family: "Righteous";
   font-weight: 500;
+  margin-top: 0.5rem;
   padding-top: 2.5rem;
 }
 .page-description {
@@ -88,11 +92,19 @@ body {
   justify-content: space-between;
 }
 
-.sub-heading {
-  font-size: 1.75rem;
+.sub-heading h3 {
+  font-size: 1.65rem;
+  font-weight: 500;
   margin: 1rem 0;
-  font-weight: 700;
+  padding-bottom: 00.5rem;
+  border-bottom: 1px solid rgb(232, 228, 228);
 }
+.sub-heading span {
+  border-bottom: 1.5px solid rgb(142, 141, 141);
+  margin: 1rem 0;
+  padding-bottom: 00.5rem;
+}
+
 .card {
   width: 49%;
   height: auto;
@@ -115,7 +127,6 @@ body {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  margin-right: 0.75rem;
 }
 .card-heading {
   font-size: 1.35rem;
@@ -133,8 +144,8 @@ body {
   margin-top: 1.5rem;
 }
 .data {
-  width: 60%;
-  margin-right: 3rem;
+  width: 80%;
+  margin: 0 0.5rem;
 }
 .blogger-name {
   font-size: 0.9rem;
@@ -185,7 +196,8 @@ footer p {
   width: 100%;
 }
 .data-story {
-  width: 100%;
+  width: 80%;
+  margin-left: 1rem;
 }
 
 .footer-section {
@@ -232,6 +244,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 1rem;
   }
   .page-heading {
     padding-top: 10rem;

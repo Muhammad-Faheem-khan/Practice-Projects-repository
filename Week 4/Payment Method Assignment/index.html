@@ -1,0 +1,204 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Method</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="w-50 m-auto check mt-5">
+      <h2 class="h2 fs-2 mt-5 text-danger opacity-75">Payment Method</h2>
+
+      <div class="row mb-5 mt-3">
+        <div class="col-md-3">
+          <img
+            src="./visa.png"
+            alt="visa image"
+            style="height: 4rem"
+            class="img-fluid border border-2 mt-3"
+          />
+        </div>
+        <div class="col-md-3">
+          <img
+            src="./paypal.png"
+            alt="visa image"
+            style="height: 4rem"
+            class="img-fluid border border-2 mt-3"
+          />
+        </div>
+      </div>
+      <form>
+        <div class="mb-3">
+          <label for="fullname" class="form-label"
+            ><p><b>Name on Card</b></p></label
+          >
+          <input
+            type="text"
+            class="form-control rounded-0 fullname"
+            placeholder="John Smith"
+            required
+          />
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6 mt-3">
+            <label for="cardnumber" class="form-label"
+              ><p><b>Card Number</b></p></label
+            >
+            <input
+              type="text"
+              class="form-control rounded-0 cardnumber"
+              placeholder="0000-0000-0000-0000"
+              required
+            />
+          </div>
+          <div class="col-md-6 mt-3">
+            <label for="cvv" class="form-label"
+              ><p><b>CVV</b></p></label
+            >
+            <input
+              type="password"
+              class="form-control rounded-0 cvv"
+              placeholder="***"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="expiration" class="form-label"
+            ><p><b>Expiration Date</b></p></label
+          >
+          <input
+            type="text"
+            class="form-control rounded-0 date"
+            placeholder="MM/YY"
+            required
+          />
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="w-100 p-2 mb-5 border-0 text-white bg-primary opacity-75"
+            onclick="myFunction()"
+          >
+            Make a Payment<span class="m-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                /></svg
+            ></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var carNumberValidation = false;
+      var numbers = /^[0-9]+$/;
+      // main function which execute on clicking button
+      function myFunction() {
+        var cvvValidation = false;
+        var dateValidation = false;
+        var fullname = document.querySelector(".fullname");
+        var showStatus = document.querySelector(".check");
+        var cvv = document.querySelector(".cvv");
+        var cardnumber = document.querySelector(".cardnumber");
+        var date = document.querySelector(".date");
+        var done = document.querySelector(".status");
+
+        // full name validation
+
+        var fullNameValidation = fullname.value.includes(" ");
+        if (!fullNameValidation) {
+          fullname.classList.add("is-invalid");
+        } else {
+          fullname.classList.remove("is-invalid");
+        }
+
+        // cvv number validation
+        if (cvv.value.length == 3 && cvv.value.match(numbers)) {
+          cvvValidation = true;
+          cvv.classList.remove("is-invalid");
+        } else {
+          cvv.classList.add("is-invalid");
+        }
+
+        // Date validation
+        var datecheck = date.value.split("/");
+        if (
+          datecheck[0].match(numbers) &&
+          datecheck[1].match(numbers) &&
+          datecheck[1] >= 22 &&
+          datecheck[0] <= 12 &&
+          datecheck[0] >= 1
+        ) {
+          dateValidation = true;
+          date.classList.remove("is-invalid");
+        } else {
+          date.classList.add("is-invalid");
+        }
+
+        // card number validation
+        cardStatus = cardvalidate(cardnumber.value);
+        if (!cardStatus) {
+          cardnumber.classList.add("is-invalid");
+        } else {
+          cardnumber.classList.remove("is-invalid");
+        }
+
+        // final check on all input data to give final status
+        console.log(
+          cvvValidation,
+          dateValidation,
+          cardStatus,
+          fullNameValidation
+        );
+        if (
+          cvvValidation &&
+          dateValidation &&
+          cardStatus &&
+          fullNameValidation
+        ) {
+          console.log("hello");
+          showStatus.innerHTML =
+            '<div class="w-50 mt-5 m-auto bg-primary rounded-3"><h1 class="text-center text-white p-3 mt-5">Successfull Transaction</h1></div>';
+        } else {
+          alert("Enter Data is not Valid please check marked inputs");
+          event.preventDefault();
+        }
+      }
+
+      // function for card number validation
+      function cardvalidate(cardNumber) {
+        card = cardNumber.split("-");
+        if (card.length === 4) {
+          for (let i = 0; i < 4; i++) {
+            if (card[i].match(numbers) && card[i].length === 4) {
+              carNumberValidation = true;
+            } else {
+              return false;
+            }
+          }
+        }
+        return carNumberValidation;
+      }
+    </script>
+  </body>
+</html>
