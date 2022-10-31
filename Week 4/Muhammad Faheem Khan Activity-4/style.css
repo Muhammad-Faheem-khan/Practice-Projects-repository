@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+.logo-img {
+  width: 10rem;
+  height: 4rem;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+.nav-link {
+  color: black;
+  font-weight: 400;
+  margin-right: 5px;
+}
+.dropdown a:hover {
+  color: blue;
+}
+.dropdown a:active {
+  color: rgb(142, 139, 139);
+}
+.searchbar {
+  border: 1px solid;
+  box-shadow: 0 0 5px #aed6f1;
+  border-radius: 4px;
+  padding: 2px;
+  margin-left: 8px;
+}
+.btn-icon {
+  width: 3rem;
+  height: 3rem;
+  border: rgb(142, 139, 139);
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+.img-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: blue;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+.badge1 {
+  position: absolute;
+  top: -3px;
+  right: 2px;
+  padding: 0px 5px;
+  border-radius: 50%;
+  background-color: blue;
+  color: blue;
+  z-index: 10;
+}
+.badge2 {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+  padding: 0px 5px;
+  border-radius: 50%;
+  background-color: green;
+  color: green;
+  z-index: 10;
+}
+.hero-img {
+  width: 30rem;
+  height: auto;
+}
+.icon-div {
+  margin-right: 7px;
+  font-size: 15px;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: blanchedalmond;
+}
+.info-para {
+  color: rgb(91, 88, 88);
+}
+.golden {
+  color: gold;
+}
+.blogger-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.data {
+  width: 80%;
+  margin: 0 0.5rem;
+}
+.blog-info {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid rgb(142, 139, 139);
+}
+.blogger-name {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+.bookmark-icon {
+  font-size: 1.35rem;
+}
+.bookmark {
+  width: 1.35rem;
+  height: 1.35rem;
+  background-color: white;
+  border: 0;
+}
+.main-div {
+  margin: 0;
+  background-color: rgb(247, 246, 246);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media  screen and (max-width: 768px) {
+.section1{
+   padding: 0 4rem;
+}
+
+}
