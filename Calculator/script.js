@@ -17,6 +17,6 @@ function equalHandler() {
             display.value = eval(display.value)
         }
     } catch (error) {
-        display.value = 'Error: Invalid Entry'
+        display.value = error.message
     }
 }

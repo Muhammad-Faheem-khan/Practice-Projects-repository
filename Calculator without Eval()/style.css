@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(49, 101, 49, 0.683);
+}
+
+.calculator {
+  margin-top: 2.5rem;
+  border: 3px solid black;
+  border-radius: 0.75rem;
+  background-color: rgb(105, 99, 99);
+  box-shadow: 0px 5px 5px black;
+}
+.calculator button {
+  font-weight: 500;
+  font-size: 1.25rem;
+  border: 2px solid black;
+}
+.screen > input {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+  background-color: rgba(196, 225, 244, 0.904);
+}
+
+.calBtn {
+  border-radius: 0.3rem;
+}
+.number {
+  width: 3rem;
+  text-align: center;
+  background-color: lightgray;
+}
+.number:hover {
+  background-color: rgb(113, 110, 110);
+}
+.operation {
+  width: 4rem;
+  text-align: center;
+  background-color: rgb(179, 170, 170);
+}
+.operation:hover {
+  background-color: rgb(141, 136, 136);
+}
+.equalbtn {
+  width: 10.5rem;
+  text-align: center;
+  background-color: tan;
+}
+.equalbtn:hover {
+  background-color: rgb(169, 140, 102);
+}
+.clearbtn {
+  background-color: lightcoral;
+}
+.clearbtn:hover {
+  background-color: rgb(204, 102, 102);
+}
+.zero {
+  width: 7.5rem;
+}
+
+@media screen and (max-width: 330px) {
+  .equalbtn,
+  .clearbtn {
+    width: 100%;
+  }
+}
