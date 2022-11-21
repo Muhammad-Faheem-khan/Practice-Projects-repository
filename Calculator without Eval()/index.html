@@ -29,21 +29,21 @@
           <div class="col-6">
             <div class="mt-3 d-flex justify-content-evenly">
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="1"
               >
                 1
               </button>
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="2"
               >
                 2
               </button>
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="3"
               >
@@ -52,21 +52,21 @@
             </div>
             <div class="mt-3 d-flex justify-content-evenly">
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="4"
               >
                 4
               </button>
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="5"
               >
                 5
               </button>
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="6"
               >
@@ -75,21 +75,21 @@
             </div>
             <div class="mt-3 d-flex justify-content-evenly">
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="7"
               >
                 7
               </button>
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="8"
               >
                 8
               </button>
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn"
                 value="9"
               >
@@ -98,14 +98,14 @@
             </div>
             <div class="mt-3 d-flex justify-content-evenly">
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn zero"
                 value="0"
               >
                 0
               </button>
               <button
-                onclick="numeric(event); displayHandler(event)"
+                onclick="handleError(); numeric(event); displayHandler(event)"
                 class="number calBtn pb-1"
                 value="."
               >
@@ -117,14 +117,14 @@
             <div>
               <div class="mt-3 d-flex justify-content-evenly">
                 <button
-                  onclick="operation(event); displayHandler(event)  "
+                  onclick="handleError(); operation(event); displayHandler(event)  "
                   class="operation calBtn"
                   value="+"
                 >
                   +
                 </button>
                 <button
-                  onclick="operation(event); displayHandler(event) "
+                  onclick="handleError(); operation(event); displayHandler(event) "
                   class="operation calBtn"
                   value="-"
                 >
@@ -133,14 +133,14 @@
               </div>
               <div class="mt-3 d-flex justify-content-evenly">
                 <button
-                  onclick="operation(event); displayHandler(event) "
+                  onclick="handleError(); operation(event); displayHandler(event) "
                   class="operation calBtn"
                   value="*"
                 >
                   *
                 </button>
                 <button
-                  onclick="operation(event); displayHandler(event) "
+                  onclick="handleError(); operation(event); displayHandler(event) "
                   class="operation calBtn"
                   value="/"
                 >
@@ -155,7 +155,7 @@
                   AC
                 </button>
                 <button
-                  onclick="clearHandler()"
+                  onclick="handleError(); clearHandler()"
                   class="operation clearbtn calBtn"
                 >
                   c
@@ -165,7 +165,7 @@
 
             <div class="mt-3 d-flex justify-content-center">
               <button
-                onclick="equalHandler()"
+                onclick=" equalHandler()"
                 class="col-10 equalbtn calBtn"
                 id="equal"
               >

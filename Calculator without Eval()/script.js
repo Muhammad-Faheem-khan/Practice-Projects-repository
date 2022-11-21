@@ -18,9 +18,7 @@ function displayHandler(e) {
 }
 function allClearHandler() {
     display.value = '';
-    arr = []
-    i = 0
-    str = ''
+    rest()
 }
 function clearHandler() {
     display.value = display.value.slice(0, -1)
@@ -34,15 +32,16 @@ function equalHandler() {
     calculation("-", res = 0, div = 0)
     display.value = arr[0]
     if (display.value == "Infinity") {
-        arr = []
-        i = 0
-        str = ''
+        rest()
     } else if (display.value == 'NaN' || display.value == 'undefined') {
         display.value = 'Error: Invalid Entry'
-        arr = []
-        i = 0
-        str = ''
+        rest()
     }
+}
+function rest(){
+    arr = []
+    i = 0
+    str = ''
 }
 
 function calculation(oper, res, div) {
@@ -68,4 +67,9 @@ function calculation(oper, res, div) {
         }
     }
     return res
+}
+function handleError(){
+    if(display.value == 'Error: Invalid Entry' || display.value == 'Infinity'|| display.value == '-Infinity'){
+        display.value = ''
+    }
 }
