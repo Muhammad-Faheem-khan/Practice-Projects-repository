@@ -27,6 +27,11 @@
     <title>Socialize</title>
   </head>
   <body>
+    <script>
+      if(sessionStorage.getItem('currentUser')==null){
+        window.location.replace('../../index.html')
+      }
+    </script>
     <div
       class="d-flex justify-content-between pt-2 px-4  header"
       style="color: #fcfcfc"
