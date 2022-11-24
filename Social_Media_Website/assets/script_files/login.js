@@ -11,7 +11,7 @@ loginElement.addEventListener('click', loginUser)
 // function to validate user 
 function loginUser(e) {
     const usersArray = userDataHandling.getAllUsers()
-   const currentUser = usersArray.find((user => user.email == userId.value ))
+    const currentUser = usersArray.find((user => user.email == userId.value))
     if (currentUser) {
         if (currentUser.password == password.value) {
             sessionStorage.setItem("currentUser", JSON.stringify(currentUser))
@@ -21,7 +21,7 @@ function loginUser(e) {
             userId.classList.add('is-valid')
             password.classList.add('is-valid')
             password.classList.remove('is-invalid')
-            
+
         } else {
             e.preventDefault()
             loginText.innerText = 'Invalid userID or password'

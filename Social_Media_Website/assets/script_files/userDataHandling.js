@@ -26,10 +26,10 @@ export function getAllUsers() {
     return users
 }
 // function to update user data 
-export function updateUser(data) {
+export function updateUser(oldData, newData) {
     let users = getAllUsers();
-    const recordIndex = users.findIndex(x => x.id === data.id)
-    users[recordIndex] = { ...data }
+    const recordIndex = users.findIndex(x => x.id === oldData.id)
+    users[recordIndex] = { ...newData }
     localStorage.setItem(KEYS.users, JSON.stringify(users))
 }
 // function to delete specific user

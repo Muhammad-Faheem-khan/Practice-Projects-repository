@@ -1,18 +1,17 @@
 'use strict'
 import * as userDataHandling from "./userDataHandling.js"
 // getting form elements from DOM
-const form = document.forms.signupForm
-const firstNameElement = form.elements.fname
-const lastNameElement = form.elements.lname
-const emailElement = form.elements.email
-const passwordElement = form.elements.password
-const confirmPasswordElement = form.elements.confirmPassword
-const agreedToTerms = form.elements.agreedCheckbox
+const firstNameElement = document.getElementById('fname')
+const lastNameElement = document.getElementById('lname')
+const emailElement = document.getElementById('email')
+const passwordElement = document.getElementById('password')
+const confirmPasswordElement = document.getElementById('confirmPassword')
+const agreedToTerms = document.getElementById('agreedCheckbox')
 const signupButton = document.getElementById('createAccountBtn')
 
 // new account sign up
-signupButton.addEventListener("click", newAccountHandler)
-function newAccountHandler(e) {
+signupButton.addEventListener("click", accountHandler)
+function accountHandler(e) {
     const userData = {
         firstName: firstNameElement.value,
         lastName: lastNameElement.value,
