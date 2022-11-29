@@ -39,7 +39,7 @@ function errorHandling(response) {
     return response.json();
 }
 
-document.addEventListener("keypress", function(event) {
+document.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         handleLogin()
     }

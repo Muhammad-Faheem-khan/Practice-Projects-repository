@@ -58,12 +58,12 @@ body {
   font-size: 0.8rem;
   text-decoration: none;
 }
-.invalid-login{
-    color: red;
-    font-size: 0.9rem;
+.invalid-login {
+  color: red;
+  font-size: 0.9rem;
 }
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 999px) {
